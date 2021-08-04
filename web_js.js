@@ -60,13 +60,10 @@ window.addEventListener('load',()=>{
         {
              navigator.geolocation.getCurrentPosition(position=>
             {
-                // console.log(position);
+                
                 long=position.coords.longitude;
                 lat=position.coords.latitude;
-                // long=-73.935242;
-                // lat=30.730610;
-                // long=25.4858;
-                // lat=39.1925;
+         
                 apiid= 'ae15b986151d83a23db1cf0da3a256e2';
                 const api =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiid}`;
                 fetch(api)
